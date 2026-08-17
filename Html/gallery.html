@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chapter Three ❤️</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/gallery.css">
+
+
+<style>
+.music-btn {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9999;
+    padding: 12px 18px;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 999px;
+    background: rgba(20,20,30,.72);
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,.25);
+    transition: transform .2s ease, background .2s ease;
+}
+.music-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(40,40,55,.88);
+}
+.music-btn.playing {
+    background: rgba(120,70,110,.82);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+<div class="stars2"></div>
+<div class="stars3"></div>
+
+<div class="moon"></div>
+
+<section class="gallery-header">
+
+    <p class="chapter">
+
+        CHAPTER THREE
+
+    </p>
+
+    <h1>
+
+        The Moments I'll Never Forget
+
+    </h1>
+
+    <p class="subtitle">
+
+        Some moments only lasted
+        a few seconds...
+
+        but became memories
+        for a lifetime.
+
+    </p>
+
+</section>
+
+<section class="memory">
+
+    <div class="memory-image">
+
+        <img src="../images/Gallery/Jeswin House.jpg">
+
+    </div>
+
+    <div class="memory-content">
+
+        <span>9th Standard</span>
+
+        <h2>
+
+            Where It All Began
+
+        </h2>
+
+        <p>
+
+            Two classmates.
+
+            Neither of us knew
+            we would one day become
+            each other's favorite person.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="memory">
+
+    <div class="memory-image">
+
+        <img src="../images/memories/Wedding.jpg">
+
+    </div>
+
+    <div class="memory-content">
+
+        <span>Your Sister's Wedding ❤️</span>
+
+        <h2>
+
+            Our Unplanned Match
+
+        </h2>
+
+        <p>
+
+            That day will always be special to me.
+
+            Being there for your sister's wedding was already a beautiful memory.
+
+            But what makes me smile every time I look at our picture
+            is that we accidentally matched our outfits.
+
+            We didn't plan it.
+            We didn't even talk about it.
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="memory">
+
+    <div class="memory-image">
+
+        <img src="../images/Gallery/Screenshot.jpg">
+
+    </div>
+
+    <div class="memory-content">
+
+        <span>Videos Calls</span>
+
+        <h2>
+
+            Distance: 1000s of km. WiFi: doing its job.
+
+        </h2>
+
+        <p>
+
+            Internet illayirunnenkil...
+            ithokke engane nadannene ennu enikk ariyilla. 😂❤️
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="memory">
+
+    <div class="memory-image">
+
+        <img src="../images/Gallery/Collage.jpg">
+
+    </div>
+
+    <div class="memory-content">
+
+        <span>Culmination</span>
+
+        <h2>
+
+            Random Pics, precious memories.
+
+        </h2>
+
+        <p>
+
+            Random pics, random moments...
+            But oro photoykkum oru story undu.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="ending">
+
+<h2>
+
+Some memories are behind us.
+
+</h2>
+
+<p>
+
+The best ones are still waiting.
+
+</p>
+
+<a href="chapter3.html" class="next">
+
+Continue →
+
+</a>
+
+</section>
+
+
+
+<!-- Background Music -->
+<button id="musicBtn" class="music-btn" type="button" aria-label="Play or pause music">
+    ♪ Play Our Song
+</button>
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="../music/chapter 2.mp3" type="audio/mpeg">
+</audio>
+<script src="../js/gallery.js"></script>
+
+</body>
+
+</html>

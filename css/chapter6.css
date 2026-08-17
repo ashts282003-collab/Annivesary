@@ -1,0 +1,768 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #07070b;
+    color: #f7f1e8;
+    font-family: "Inter", Arial, sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ==============================
+   BACKGROUND
+============================== */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 120, 144, 0.13),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(138, 112, 255, 0.06),
+            transparent 30%
+        );
+}
+
+.stars {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.2;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(#fff 1px, transparent 1px),
+        radial-gradient(#fff 1px, transparent 1px);
+
+    background-size:
+        90px 90px,
+        150px 150px;
+
+    background-position:
+        0 0,
+        40px 60px;
+}
+
+/* ==============================
+   TYPOGRAPHY
+============================== */
+
+h1,
+h2,
+h3 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 500;
+    line-height: 0.95;
+}
+
+.eyebrow {
+    font-size: 20px;
+    letter-spacing: 0.35em;
+    color: #ffd1dc;
+    margin-bottom: 22px;
+    font-weight: 600;
+}
+
+/* ==============================
+   SECTIONS
+============================== */
+
+section {
+    min-height: 100vh;
+    padding: 100px 7vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+/* ==============================
+   HERO
+============================== */
+
+.hero h1 {
+    font-size: clamp(5rem, 18vw, 13rem);
+
+    background: linear-gradient(
+        120deg,
+        #ffffff,
+        #ffb6c5,
+        #ffffff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero > p:not(.eyebrow),
+.intro > p:not(.eyebrow),
+.song > p:not(.eyebrow) {
+    color: #aaa39b;
+}
+
+/* ==============================
+   SCROLL INDICATOR
+============================== */
+
+.scroll {
+    margin-top: 90px;
+    color: #888;
+    letter-spacing: 0.3em;
+    font-size: 0.7rem;
+
+    animation: bob 2s infinite ease-in-out;
+}
+
+@keyframes bob {
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+/* ==============================
+   INTRO
+============================== */
+
+.intro h2 {
+    font-size: clamp(3rem, 7vw, 7rem);
+    max-width: 900px;
+}
+
+.intro > p:last-child {
+    margin-top: 30px;
+}
+
+/* ==============================
+   TIMELINE
+============================== */
+
+.timeline {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+
+    margin: auto;
+    padding-top: 80px;
+}
+
+.memory {
+    position: relative;
+    width: 48%;
+    margin-bottom: 130px;
+
+    opacity: 0;
+    transform: translateY(45px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.memory.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.left {
+    margin-right: auto;
+    text-align: left;
+}
+
+.right {
+    margin-left: auto;
+    text-align: left;
+}
+
+/* ==============================
+   DATE
+============================== */
+
+.date {
+    display: block;
+
+    font-size: 0.62rem;
+    letter-spacing: 0.27em;
+
+    color: #aaa29a;
+
+    margin-bottom: 14px;
+}
+
+/* ==============================
+   MEMORY CARD
+============================== */
+
+.card {
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.015)
+        );
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 24px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 25px 80px rgba(0, 0, 0, 0.33);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    overflow: hidden;
+}
+
+.card > b {
+    display: inline-block;
+
+    font-size: 0.58rem;
+    letter-spacing: 0.24em;
+
+    color: #ff8fa3;
+
+    margin-bottom: 22px;
+}
+
+.card p {
+    padding: 12px 15px;
+    margin: 7px 0;
+
+    border-radius: 14px;
+
+    font-size: 0.9rem;
+    line-height: 1.45;
+
+    max-width: 90%;
+}
+
+.me {
+    margin-left: auto;
+
+    background: #243b2f;
+
+    text-align: right;
+}
+
+.her {
+    margin-right: auto;
+
+    background: #202024;
+
+    text-align: left;
+}
+
+.card small {
+    display: block;
+
+    margin-top: 22px;
+
+    color: #9d9892;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.2rem;
+}
+
+.card h3 {
+    font-size: 2.5rem;
+    color: #ffd1dc;
+
+    margin: 20px 0;
+}
+
+.card hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+
+    margin: 20px 0;
+}
+
+/* ==============================
+   SPECIAL CARDS
+============================== */
+
+.highlight {
+    box-shadow:
+        0 0 70px rgba(255, 130, 159, 0.08);
+}
+
+.emotional {
+    border-color: rgba(255, 143, 163, 0.25);
+}
+
+/* ==============================
+   MILESTONE
+============================== */
+
+.milestone {
+    width: 100%;
+    margin: 20px auto 150px;
+
+    padding: 50px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.milestone > span {
+    display: block;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 7rem;
+
+    color: #ff8fa3;
+}
+
+.milestone p {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 2rem;
+}
+
+.milestone small {
+    color: #888;
+}
+
+/* ==============================
+   THINGS / STATS
+============================== */
+
+.things h2 {
+    font-size: clamp(2.7rem, 7vw, 6.5rem);
+    max-width: 1000px;
+}
+
+.stat {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+
+    line-height: 1.05;
+}
+
+.stat p {
+    margin: 20px;
+    color: #c9c1b8;
+}
+
+.stat p:last-child {
+    color: #fff;
+}
+
+/* ==============================
+   COUNTDOWN
+============================== */
+
+.count h2 {
+    font-size: clamp(4rem, 9vw, 8rem);
+}
+
+#clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 55px 0 25px;
+}
+
+#clock strong {
+    display: block;
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    font-weight: 500;
+}
+
+#clock span {
+    display: block;
+
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+
+    color: #8e8880;
+}
+
+.count #note {
+    color: #888;
+
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+}
+
+/* ==============================
+   MUSIC / VINYL
+============================== */
+
+.vinyl {
+    width: 190px;
+    height: 190px;
+
+    border-radius: 50%;
+
+    display: grid;
+    place-items: center;
+
+    background:
+        repeating-radial-gradient(
+            circle,
+            #111 0,
+            #111 5px,
+            #18171b 6px,
+            #111 9px
+        );
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.53);
+
+    animation: spin 10s linear infinite;
+    animation-play-state: paused;
+}
+
+.vinyl.playing {
+    animation-play-state: running;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+button {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #fff;
+
+    border-radius: 999px;
+
+    padding: 12px 20px;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.1);
+
+    border-color: rgba(255, 143, 163, 0.4);
+
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ==============================
+   MUSIC TOGGLE
+============================== */
+
+#musicToggle {
+    position: fixed;
+
+    right: 22px;
+    top: 20px;
+
+    z-index: 1000;
+}
+
+/* ==============================
+   FINALE
+============================== */
+
+.finale {
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 60%,
+            rgba(255, 80, 130, 0.13),
+            transparent 35%
+        );
+}
+
+.finale h2 {
+    font-size: clamp(4rem, 10vw, 9rem);
+}
+
+.finale h1 {
+    font-size: clamp(3.8rem, 10vw, 9rem);
+
+    color: #ffd5df;
+
+    margin-top: 18px;
+}
+
+.finale > p:last-of-type {
+    margin-top: 35px;
+
+    color: #aaa;
+
+    letter-spacing: 0.18em;
+
+    font-size: 0.8rem;
+}
+
+/* ==============================
+   FLOATING HEARTS
+============================== */
+
+.heart {
+    position: absolute;
+
+    bottom: -30px;
+
+    animation: float 7s linear forwards;
+
+    opacity: 0;
+
+    color: #ff9eb1;
+
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+/* ==============================
+   REVEAL ANIMATION
+============================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(45px);
+
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==============================
+   TABLET
+============================== */
+
+@media (max-width: 900px) {
+    section {
+        padding: 90px 5vw;
+    }
+
+    .memory {
+        width: 70%;
+    }
+}
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media (max-width: 700px) {
+
+    section {
+        min-height: 100svh;
+        padding: 80px 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(4rem, 22vw, 7rem);
+    }
+
+    .memory {
+        width: 92%;
+        margin-bottom: 90px;
+    }
+
+    .left,
+    .right {
+        text-align: left;
+    }
+
+    .left {
+        margin-right: auto;
+    }
+
+    .right {
+        margin-left: 8%;
+    }
+
+    .card {
+        padding: 22px;
+
+        border-radius: 20px;
+    }
+
+    .card p {
+        font-size: 0.84rem;
+        max-width: 95%;
+    }
+
+    .card h3 {
+        font-size: 2rem;
+    }
+
+    .milestone {
+        padding: 35px 15px;
+
+        margin-bottom: 100px;
+    }
+
+    .milestone > span {
+        font-size: 5rem;
+    }
+
+    .milestone p {
+        font-size: 1.6rem;
+    }
+
+    #clock {
+        gap: 7px;
+        margin-top: 40px;
+    }
+
+    #clock strong {
+        font-size: clamp(2.5rem, 13vw, 4rem);
+    }
+
+    #clock span {
+        font-size: 0.5rem;
+        letter-spacing: 0.18em;
+    }
+
+    .vinyl {
+        width: 150px;
+        height: 150px;
+    }
+
+    #musicToggle {
+        right: 15px;
+        top: 15px;
+    }
+
+    #musicToggle span {
+        display: none;
+    }
+}
+
+/* ==============================
+   SMALL PHONES
+============================== */
+
+@media (max-width: 400px) {
+
+    section {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .memory {
+        width: 95%;
+    }
+
+    .right {
+        margin-left: 5%;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .card p {
+        padding: 10px 12px;
+        font-size: 0.8rem;
+    }
+
+    .milestone > span {
+        font-size: 4rem;
+    }
+
+    #clock {
+        gap: 5px;
+    }
+}
+
+/* ==============================
+   ACCESSIBILITY
+============================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal,
+    .memory {
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Chapter 5 — The Future Capsule 💌</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500&family=Caveat:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Chapter 5 CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/chapter5.css"
+    >
+
+</head>
+
+<style>
+.music-btn {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 9999;
+    padding: 12px 18px;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 999px;
+    background: rgba(20,20,30,.72);
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    font-size: 13px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 30px rgba(0,0,0,.25);
+    transition: transform .2s ease, background .2s ease;
+}
+.music-btn:hover {
+    transform: translateY(-2px);
+    background: rgba(40,40,55,.88);
+}
+.music-btn.playing {
+    background: rgba(120,70,110,.82);
+}
+</style>
+
+
+<body class="c5-page">
+
+
+    <!-- ==========================================
+         BACKGROUND
+    =========================================== -->
+
+    <div class="c5-stars"></div>
+    <div class="c5-stars-2"></div>
+    <div class="c5-stars-3"></div>
+
+    <div class="c5-moon"></div>
+
+    <div class="c5-particles"></div>
+
+
+    <!-- ==========================================
+         MAIN
+    =========================================== -->
+
+    <main class="c5-container">
+
+
+        <!-- ======================================
+             OPENING
+        ======================================= -->
+
+        <section class="c5-opening">
+
+
+            <div class="c5-opening-content">
+
+
+                <p class="c5-chapter-number">
+                    CHAPTER 5
+                </p>
+
+
+                <h1>
+                    The Future Capsule 💌
+                </h1>
+
+
+                <p class="c5-opening-text">
+
+                    Some memories are meant
+                    to be remembered.
+
+                    <br>
+
+                    <span>
+                        Some are meant to be
+                        opened in the future.
+                    </span>
+
+                </p>
+
+
+                <!-- =================================
+                     CAPSULE
+                ================================== -->
+
+                <div class="c5-capsule" id="c5Capsule">
+
+                    <div class="c5-capsule-glow"></div>
+
+                    <div class="c5-envelope">
+
+                        <div class="c5-envelope-top"></div>
+
+                        <div class="c5-envelope-body">
+
+                            <span class="c5-envelope-symbol">
+                                💌
+                            </span>
+
+                        </div>
+
+                        <div class="c5-envelope-seal">
+                            🔐
+                        </div>
+
+                    </div>
+
+                    <p class="c5-capsule-label">
+                        A message from
+                        <br>
+                        <span>us today</span>
+                    </p>
+
+                </div>
+
+
+                <div class="c5-lock-status" id="c5LockStatus">
+
+                    <div class="c5-lock-icon">
+                        🔒
+                    </div>
+
+                    <p class="c5-lock-title">
+                        This capsule is still sealed.
+                    </p>
+
+                    <p class="c5-lock-text">
+                        Some things are meant to wait.
+                    </p>
+
+                </div>
+
+
+                <div class="c5-countdown c5-lock-countdown">
+
+                    <div>
+                        <strong id="c5Days">--</strong>
+                        <span>Days</span>
+                    </div>
+
+                    <div>
+                        <strong id="c5Hours">--</strong>
+                        <span>Hours</span>
+                    </div>
+
+                    <div>
+                        <strong id="c5Minutes">--</strong>
+                        <span>Minutes</span>
+                    </div>
+
+                    <div>
+                        <strong id="c5Seconds">--</strong>
+                        <span>Seconds</span>
+                    </div>
+
+                </div>
+
+
+                <p class="c5-countdown-note">
+
+                    Sealed until
+                    <strong>19 August 2030</strong>
+
+                </p>
+
+
+                <button
+                    class="c5-open-button"
+                    id="c5OpenButton"
+                    disabled
+                >
+                    🔒 Locked
+                </button>
+
+
+                <p class="c5-hint" id="c5Hint">
+                    Come back when we're five years older. ❤️
+                </p>
+
+
+            </div>
+
+        </section>
+<!-- =================================
+     CONTINUE TO NEXT CHAPTER
+================================== -->
+
+            <section class="c5-continue">
+
+                <p>
+                    The future can wait...
+                </p>
+
+                <a
+                    href="chapter6.html"
+                    class="c5-next-button"
+                >
+                    Continue Our Story →
+                </a>
+
+            </section>
+
+
+        <!-- ======================================
+             CAPSULE CONTENT
+        ======================================= -->
+
+        <section
+            class="c5-capsule-content"
+            id="c5CapsuleContent"
+        >
+
+
+            <!-- =================================
+                 FUTURE LETTER
+            ================================== -->
+
+            <div class="c5-letter-wrapper">
+
+
+                <div class="c5-letter-card">
+
+
+                    <p class="c5-letter-date">
+
+                        19 August 2026
+
+                    </p>
+
+
+                    <h2>
+
+                        Dear Future Us,
+
+                    </h2>
+
+
+                    <div class="c5-letter">
+
+
+                        <p class="c5-reveal">
+                            If you're reading this...
+                            then somehow, we made it here.
+                        </p>
+
+
+                        <p class="c5-reveal">
+                            I don't know where we'll be
+                            when we open this again.
+                        </p>
+
+
+                        <p class="c5-reveal">
+                            Maybe we'll be living somewhere
+                            we once dreamed about.
+                        </p>
+
+
+                        <p class="c5-reveal">
+                            Maybe we'll have travelled to
+                            places we only talked about.
+                        </p>
+
+
+                        <p class="c5-reveal">
+                            Maybe we'll have completely
+                            different dreams.
+                        </p>
+
+
+                        <p class="c5-reveal">
+                            Maybe we'll still argue about
+                            the most random things. 😂
+                        </p>
+
+
+                        <p class="c5-reveal">
+                            Maybe we'll still make the same
+                            stupid jokes.
+                        </p>
+
+
+                        <p class="c5-reveal">
+                            Maybe you'll still steal my
+                            attention when I'm supposed
+                            to be doing something important.
+                        </p>
+
+
+                        <p class="c5-reveal c5-highlight">
+                            A lot of things might change.
+                        </p>
+
+
+                        <p class="c5-reveal">
+                            We will change too.
+                        </p>
+
+
+                        <p class="c5-reveal c5-highlight-big">
+
+                            But I hope one thing doesn't.
+
+                        </p>
+
+
+                        <p class="c5-reveal">
+
+                            I hope we're still
+                            choosing each other.
+
+                        </p>
+
+
+                        <p class="c5-reveal">
+
+                            Because I don't know what
+                            our future will look like.
+
+                        </p>
+
+
+                        <p class="c5-reveal">
+
+                            And honestly...
+
+                        </p>
+
+
+                        <p class="c5-reveal c5-highlight-big">
+
+                            I don't want to predict it.
+
+                        </p>
+
+
+                        <p class="c5-reveal c5-final-letter-line">
+
+                            I just want to live it
+                            with you. ❤️
+
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="c5-letter-signature">
+
+                        <span>
+                            From us,
+                        </span>
+
+                        <strong>
+                            to us. ❤️
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 QUESTIONS
+            ================================== -->
+
+            <section class="c5-questions-section">
+
+
+                <p class="c5-section-label">
+                    A LITTLE SOMETHING FOR FUTURE US
+                </p>
+
+
+                <h2>
+                    Questions for Our Future Selves
+                </h2>
+
+
+                <p class="c5-question-intro">
+
+                    Maybe we won't remember
+                    what we hoped for today.
+
+                    <br>
+
+                    So let's leave a few questions
+                    behind.
+
+                </p>
+
+
+                <div class="c5-questions">
+
+
+                    <div class="c5-question c5-reveal">
+
+                        <span>01</span>
+
+                        <p>
+                            Where are we living?
+                        </p>
+
+                    </div>
+
+
+                    <div class="c5-question c5-reveal">
+
+                        <span>02</span>
+
+                        <p>
+                            What are we dreaming
+                            about now?
+                        </p>
+
+                    </div>
+
+
+                    <div class="c5-question c5-reveal">
+
+                        <span>03</span>
+
+                        <p>
+                            Which places did we
+                            finally visit?
+                        </p>
+
+                    </div>
+
+
+                    <div class="c5-question c5-reveal">
+
+                        <span>04</span>
+
+                        <p>
+                            What song is ours now?
+                        </p>
+
+                    </div>
+
+
+                    <div class="c5-question c5-reveal">
+
+                        <span>05</span>
+
+                        <p>
+                            Are we still laughing
+                            at the same stupid jokes?
+                        </p>
+
+                    </div>
+
+
+                    <div class="c5-question c5-reveal">
+
+                        <span>06</span>
+
+                        <p>
+                            Did we become the people
+                            we wanted to become?
+                        </p>
+
+                    </div>
+
+
+                    <div class="c5-question c5-reveal">
+
+                        <span>07</span>
+
+                        <p>
+                            What is something we never
+                            thought we'd experience together?
+                        </p>
+
+                    </div>
+
+
+                    <div class="c5-question c5-question-important c5-reveal">
+
+                        <span>08</span>
+
+                        <p>
+                            And most importantly…
+                        </p>
+
+                        <strong>
+                            Are you still choosing
+                            each other? ❤️
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 FUTURE DATE
+            ================================== -->
+
+            <section class="c5-future-date">
+
+                <div class="c5-lock-icon">
+                    🔐
+                </div>
+
+                <p class="c5-section-label">
+                    SEALED FOR FIVE YEARS
+                </p>
+
+                <h2>
+                    A message waiting
+                    for our future selves.
+                </h2>
+
+                <p class="c5-future-description">
+
+                    Whatever life looks like then,
+                    I hope we come back here
+                    together.
+
+                </p>
+
+                <div class="c5-future-date-line">
+
+                    19 August 2030
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 FINAL MESSAGE
+            ================================== -->
+
+            <section class="c5-final">
+
+
+                <div class="c5-final-line"></div>
+
+
+                <p class="c5-final-text">
+
+                    We don't know where
+                    life will take us.
+
+                </p>
+
+
+                <p class="c5-final-text">
+
+                    We don't know how much
+                    we'll change.
+
+                </p>
+
+
+                <p class="c5-final-text">
+
+                    We don't know what
+                    the future holds.
+
+                </p>
+
+
+                <p class="c5-final-text c5-final-spacing">
+
+                    But if I could leave
+                    one promise inside
+                    this capsule...
+
+                </p>
+
+
+                <p class="c5-final-promise">
+
+                    it would be this:
+
+                </p>
+
+
+                <p class="c5-final-text">
+
+                    No matter where
+                    we end up,
+
+                    <br>
+
+                    I hope I still get to
+                    stand beside you.
+
+                </p>
+
+
+                <p class="c5-final-choice">
+
+                    Because if I had
+                    to choose again...
+
+                </p>
+
+
+                <p class="c5-final-choice-big">
+
+                    I'd still choose you. ❤️
+
+                </p>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 CLOSING CAPSULE
+            ================================== -->
+
+            <section class="c5-closing">
+
+
+                <div class="c5-closing-capsule">
+
+                    💌
+
+                </div>
+
+
+                <p>
+                    Until we meet
+                    our future selves…
+                </p>
+
+
+                <h2>
+                    See you there. ❤️
+                </h2>
+
+
+                <a
+                    href="chapter6.html"
+                    class="c5-next-button"
+                >
+
+                    Continue Our Story →
+
+                </a>
+
+
+            </section>
+
+
+        </section>
+
+    </main>
+    <!-- Background Music -->
+    <button id="musicBtn" class="music-btn" type="button" aria-label="Play or pause music">
+        ♪ Play Our Song
+    </button>
+
+    <audio id="bgMusic" loop preload="auto">
+        <source src="../music/chapter 4.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script src="../js/chapter5.js"></script>
+
+</body>
+
+</html>
